@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<h1 class="text-white text-center justify-center text-xl font-extrabold">video page</h1>
+
+<div class="container mt-5">
+        
+    <!--Alert component-->
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative my-5" role="alert">
+        <strong class="font-bold">Alert</strong>
+        <span class="block sm:inline">Please Update your password</span>
+    </div>
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative my-5" role="alert">
+        <strong class="font-bold">Alert</strong>
+        <span class="block sm:inline">Password changed sucessfully</span>
+    </div>
+</div>
+
+<!--Card columns-->
+<div class="container mt-5">
+    <!--Flex on medium screens and up-->
+    <div class="md:flex">
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-5 py-5 m-2 rounded">
+            <div class="lg:flex lg:item-center">
+                <div class="flex-shrink-0">
+                    <img src="{% static '/images/techbro.jpeg '%}" alt="" class="rounded-lg lg:w-64"/>
+                </div>
+                <div class="mt-4 lg:mt-0 lg:ml-6">
+                    <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Networking</div>
+                    <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900">
+                        Finding connections to help your business grow </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-5 py-5 m-2 rounded">
+            <div class="lg:flex lg:item-center">
+                <div class="flex-shrink-0">
+                    <img src="{% static '/images/techbro.jpeg '%}" alt="" class="rounded-lg lg:w-64"/>
+                </div>
+                <div class="mt-4 lg:mt-0 lg:ml-6">
+                    <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Networking</div>
+                    <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900">
+                        Finding connections to help your business grow </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

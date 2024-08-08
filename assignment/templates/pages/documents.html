@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<h1 class="text-white text-center justify-center text-xl font-extrabold">docs page</h1>
+<div class="container mt-5">
+    <div class="md:flex">
+
+        <!--Card component-->
+        <a href="{% url 'all-music'%}" class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+                <div class="flex-shrink-0 ">
+                    <img src="{% static 'images/music.png' %}" alt="" class="h-12 w-12">
+                </div>
+                <div class="ml-6 pt-1">
+                    <h4 class="text-xl text-gray-900">Music file</h4>
+                    <p class="text-base text-gray-600">You Can download music files here</p>
+                </div>
+        </a>
+
+        <!--Card component-->
+            <a href="{% url 'all_images'%}" target="_blank" class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+                <div class="flex-shrink-0 ">
+                    <img src="{% static 'images/techbro.jpeg' %}" alt="" class="h-12 w-12">
+                </div>
+                <div class="ml-6 pt-1">
+                    <h4 class="text-xl text-gray-900">Image file</h4>
+                    <p class="text-base text-gray-600">You Can download image files here</p>
+                </div>
+            </a>
+
+        <!--Card component-->
+        <a href="{% url 'all-pdfs'%}" class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+            
+                <div class="flex-shrink-0 ">
+                    <img src="{% static 'images/pdf.png' %}" alt="" class="h-12 w-12">
+                </div>
+                <div class="ml-6 pt-1">
+                    <h4 class="text-xl text-gray-900">PDF file</h4>
+                    <p class="text-base text-gray-600">You Can download PDF file here</p>
+                </div>
+            </a>
+        </div>
+</div>
+
+<div class="container mt-5">
+    <div class="md:flex">
+
+        <!--Card component-->
+        <a href="{% url 'all-videos'%}" class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
+            <div class="flex-shrink-0 ">
+                <img src="{% static 'images//video.jpg' %}" alt="" class="h-12 w-12">
+            </div>
+            <div class="ml-6 pt-1">
+                <h4 class="text-xl text-gray-900">Video file</h4>
+                <p class="text-base text-gray-600">You Can download music files here</p>
+            </div>
+        </a>
+
+        <!--Card component-->
+        <a href="" class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl"> 
+            <div class="flex-shrink-0 ">
+                <img src="{% static 'images//techbro.jpeg' %}" alt="" class="h-12 w-12">
+            </div>
+            <div class="ml-6 pt-1">
+                <h4 class="text-xl text-gray-900">PDF file</h4>
+                <p class="text-base text-gray-600">You Can download PDF file here</p>
+            </div>
+        </a>
+        <!--Card component-->
+        <a href="" class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl"> 
+            <div class="flex-shrink-0 ">
+                <img src="{% static 'images//techbro.jpeg' %}" alt="" class="h-12 w-12">
+            </div>
+            <div class="ml-6 pt-1">
+                <h4 class="text-xl text-gray-900">PDF file</h4>
+                <p class="text-base text-gray-600">You Can download PDF file here</p>
+            </div>
+        </a>
+</div>
+{% endblock %}

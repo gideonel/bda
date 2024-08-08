@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/output.css' %}">
+
+</head>
+<body class="bg-blue-700">
+    <!--Navbar-->
+    <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+        <div class="flex item-center flex-shrink-0 text-white mr-6">
+            <span class="font-bold text-xl">
+                <a href="{% url 'index' %}">ArchTechs</a></span>
+        </div>
+        <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="text-sm sm:flex-grow">
+                <a href="{% url 'index' %}" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                    Home
+                </a>
+                <a href="{% url 'images' %}" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                    Images
+                </a>
+                <a href="{% url 'documents' %}" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                    Files
+                </a>
+            </div>
+            <div>
+                <a href="{% url 'documents' %}" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                    About
+                </a>
+                <a href="{% url 'contact' %}" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                    Contact
+                </a>
+                <a href="{% url 'documents' %}" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                    Faq
+                </a>
+                <a href="{% static '/css/output.css' %}" class="inline-block text-sm px-4 py-2 leading-none border rounded
+                 text-white border-white hover:border-transparent hover:text-blue-500
+                  hover:bg-white mt-4 md:mt-0">Login</a>
+                  <a href="{% static '/css/output.css' %}" class="inline-block text-sm px-4 py-2 leading-none border rounded
+                 text-white border-white hover:border-transparent hover:text-blue-500
+                  hover:bg-white mt-4 md:mt-0">Signup</a>
+            </div>
+        </div>
+    </nav>
+    
+    {% block content %} 
+    
+    {% endblock %}
+</body>
+</html>

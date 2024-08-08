@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1 class="text-white text-center justify-center text-xl font-extrabold">Videos page</h1>
+<!--Card columns-->
+<div class="container mx-auto">
+    <!--Flex on medium screens and up-->
+    <div class="md:flex">
+        {% for videos in video_list %}
+
+        <div class="flex-1 text-gray-700 text-center bg-gray-400 px-5 py-5 m-2 rounded w-40">
+            <div class="lg:flex lg:item-center">
+                <div class="flex">
+                    <img src="{% static 'images//video.jpg' %}" alt="{{ forloop.counter}}" class="rounded-lg lg:w-64"/>
+                </div>
+                <div class="mt-4 lg:mt-0 lg:ml-6">
+                    <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">{{videos.name}}</div>
+                    <p href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900">
+                        Finding connections to help your business grow </p>
+                    <div class="flex-shrink-0 mx-auto md:flex">
+                    <a href="{{ videos.url }}" class="block mt-1 text-lg leading-tight font-semibold text-white">Preview</a>
+                    <a href="{{ videos.url }}" download="{{ videos.name }}" class="block mt-1 text-lg leading-tight font-semibold text-white">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
